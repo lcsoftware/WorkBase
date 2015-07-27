@@ -1,5 +1,5 @@
 <div class="navbar navbar-default navbar-static-top">
-  <div class="container">
+  <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" ng-click="isCollapsed = !isCollapsed" class="navbar-toggle">
         <span class="sr-only">Toggle navigation</span>
@@ -13,7 +13,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/about">About</a></li>
         <li>
-          <meteor-include src="loginButtons"></meteor-include>
+          <span meteor-include src="loginButtons"></span>
         </li>
       </ul>
     </div>
