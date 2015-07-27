@@ -1,0 +1,36 @@
+<div class="col-md-3 col-md-offset-3">
+<form>
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="用户名">
+  </div>
+  <div class="form-group" ng-hide="opLogin">
+    <input type="text" class="form-control" placeholder="手机号码">
+  </div>
+  <div class="form-group" ng-hide="opLogin">
+    <input type="text" class="form-control" placeholder="昵称">
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" placeholder="密码">
+    <!-- <p class="help-block">Example block-level help text here.</p> -->
+  </div>
+  <div class="form-group" ng-hide="opLogin">
+    <input type="password" class="form-control" placeholder="验证">
+  </div>
+  <div class="checkbox" ng-show="opLogin">
+    <label>
+      <input type="checkbox"> 自动登录
+    </label>
+  </div>
+  <div ng-show="opLogin">
+    <button type="submit" class="btn btn-primary" style="margin-right:3em;">登  录</button>
+    <a style="cursor:pointer;" ng-click="opLogin=false">忘记密码</a>
+  </div>
+  <div ng-show="opLogin" class="pull-right">
+    我还没有创建 <a style="cursor:pointer;" ng-click="opLogin=false">创建新账户</a>
+  </div>
+  <div ng-hide="opLogin">
+    <button type="submit" class="btn btn-primary" style="margin-right:3em;">注    册</button>
+    我已经注册过账户 <a style="cursor:pointer;" ng-click="opLogin=true">请登录</a>
+  </div>
+</form>
+</div>
