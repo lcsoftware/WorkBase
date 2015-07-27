@@ -10,7 +10,7 @@ angular.module('workbaseApp')
       })
       .state('changepwd', {
         url: '/change/password',
-        templateUrl: 'client/user/login.view.ng.html',
+        templateUrl: 'client/user/password.view.ng.html',
         controller: 'ChangePwdCtrl'
       })
       .state('findpwd', {
