@@ -1,8 +1,9 @@
 'use strict'
 
-angular.module('workbaseApp').controller('LoginCtrl', ['$scope', '$meteor',
+angular.module('workbaseApp').controller('LoginCtrl', ['$scope', '$state',
+  '$meteor',
   function(
-    $scope, $meteor) {
+    $scope, $state, $meteor) {
     $scope.user = {
       username: 'user01',
       password: '123'
@@ -11,8 +12,7 @@ angular.module('workbaseApp').controller('LoginCtrl', ['$scope', '$meteor',
     $scope.login = function(user) {
       $meteor.loginWithPassword(user.username, user.password)
         .then(function() {
-          console.log('login success');
-          console.log($scope.currentUser);
+          $state.go('main');
         }, function(err) {
           console.log(err);
         });

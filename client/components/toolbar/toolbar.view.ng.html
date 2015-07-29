@@ -10,9 +10,20 @@
       <a href="/" class="navbar-brand">workbaseApp</a>
     </div>
     <div class="navbar-main navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
+      <!-- <ul class="nav navbar-nav navbar-right">
         <li><a href="/login">登录</a></li>
-      </ul>
+      </ul> -->
+      <div class="dropdown pull-right" style="margin-top:0.5em;" ng-class="{itemHide: $state.includes('login')}">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+            {{currentUser.username}}
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a href="#" role="menuitem" tabindex="-1">Action</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation" ng-click="logout()"><a href="#" role="menuitem" tabindex="-1">退出</a></li>
+        </ul>
+    </div>
     </div>
   </div>
 </div>

@@ -1,7 +1,8 @@
 'use strict'
 
-angular.module('workbaseApp').controller('RegisterCtrl', ['$scope', '$meteor',
-  function($scope, $meteor) {
+angular.module('workbaseApp').controller('RegisterCtrl', ['$scope', '$state',
+  '$meteor',
+  function($scope, $state, $meteor) {
 
     $scope.user = {
       username: 'user01',
@@ -20,8 +21,7 @@ angular.module('workbaseApp').controller('RegisterCtrl', ['$scope', '$meteor',
           mobile: user.mobile
         }
       }).then(function() {
-        console.log('register success');
-        console.log($scope.currentUser);
+        $state.go('main');
       }, function(err) {
         console.log('register error - ', err);
       });
