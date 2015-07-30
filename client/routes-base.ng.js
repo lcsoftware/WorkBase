@@ -1,8 +1,6 @@
 'use strict';
-
-angular.module('workbaseApp')
-
-.config(function($urlRouterProvider, $locationProvider) {
+angular.module('workbaseApp').config(function($urlRouterProvider,
+  $locationProvider) {
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
 }).run(['$rootScope', '$state', '$meteor', '$window', function($rootScope,
@@ -13,13 +11,15 @@ angular.module('workbaseApp')
       $state.go('main');
     }
   });
-
   $rootScope.$on('$stateChangeStart', function(event, toState, toParams,
     fromState, fromParams) {})
-
   $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams,
-    fromState, fromParams) {});
-
-
-
+    fromState, fromParams) {
+    if (toState.name === 'main' && !$rootScope.currentUser) {
+      $meteor.logout();
+      $state.go('login', {
+        location: 'replace'
+      });
+    }
+  });
 }]);
