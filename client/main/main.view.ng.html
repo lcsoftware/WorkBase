@@ -1,4 +1,4 @@
-<div class="main container-fluid">
+<!-- <div class="main container-fluid">
   <h1>Things</h1>
   <form ng-submit="save()" name="form" novalidate="" class="thing-form">
     <p class="input-group">
@@ -29,4 +29,35 @@
     </div>
   </div>
   <p>Total number of things: {{thingsCount.count}}</p>
+</div> -->
+<div class="row" style="margin-top:-15px;">
+  <div class="col-md-2">
+    <div class="list-group">
+      <a class="list-group-item" style="background-color:black;color:white;cursor:pointer;" ui-sref="newMessage">
+        新消息
+        <span class="glyphicon glyphicon-plus pull-right" aria-hidden="true"></span>
+      </a>
+      <a href="#" class="list-group-item">
+        <span class="badge">18</span>收件箱
+      </a>
+      <a href="#" class="list-group-item">
+        已发送
+      </a>
+      <a href="#" class="list-group-item">
+        已删除
+      </a>
+    </div>
+    <div class="list-group" style="margin-top:-15px;">
+      <a class="list-group-item" style="background-color:black;color:white;cursor:pointer;" ui-sref="contacts">
+        短讯
+        <span class="glyphicon glyphicon-plus pull-right" aria-hidden="true"></span>
+      </a>
+      <a href="#" ui-sref="nearestContacts" class="list-group-item">
+        最近短讯
+      </a>
+      <a href="#" ui-sref="allContacts" class="list-group-item">
+         我的联系人
+      </a>
+    </div>
+  </div>
 </div>

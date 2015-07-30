@@ -21,7 +21,9 @@ angular.module('workbaseApp').controller('RegisterCtrl', ['$scope', '$state',
           mobile: user.mobile
         }
       }).then(function() {
-        $state.go('main');
+        $state.go('main', {
+          location: 'replace'
+        });
       }, function(err) {
         console.log('register error - ', err);
       });

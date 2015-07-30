@@ -8,7 +8,7 @@ angular.module('workbaseApp', [
 onReady = function() {
   angular.bootstrap(document, ['workbaseApp']);
 };
-  
+
 if(Meteor.isCordova) {
   angular.element(document).on('deviceready', onReady);
 } else {
