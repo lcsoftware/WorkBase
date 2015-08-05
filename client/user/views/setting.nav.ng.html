@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-2">
+    <div class="list-group">
+      <a class="list-group-item disabled" style="background-color:black;color:white;">
+          账户资料
+      </a>
+      <a ui-sref="settings.profile" ui-sref-active="active" class="list-group-item">
+        基本资料
+      </a>
+      <a ui-sref="settings.company" ui-sref-active="active" class="list-group-item">
+        目前公司
+      </a>
+      <a ui-sref="settings.changepwd" ui-sref-active="active" class="list-group-item">
+        修改密码
+      </a>
+    </div>
+  </div>
+  <div class="col-md-10" ui-view>
+  </div>
+</div>

@@ -11,6 +11,10 @@
     margin: 0.5rem;
 }
 
+a {
+  cursor:pointer;
+}
+
 .itemHide {
   display: none;
 }
